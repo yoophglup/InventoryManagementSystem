@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modifyPart_controller">
+    <children>
+        <Label layoutX="44.0" layoutY="53.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="inHouseRadio" layoutX="137.0" layoutY="54.0" mnemonicParsing="false" onAction="#onInhouse" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="housegroup" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="OutsourcedRadio" layoutX="300.0" layoutY="54.0" mnemonicParsing="false" onAction="#onoutsourced" text="Outsourced" toggleGroup="$housegroup" />
+        <TextField id="id" fx:id="modID" disable="true" editable="false" layoutX="132.0" layoutY="118.0" promptText="Auto Gen -Disabled">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></TextField>
+        <TextField fx:id="modName" layoutX="132.0" layoutY="157.0" />
+        <TextField fx:id="modInv" layoutX="132.0" layoutY="194.0" />
+        <TextField fx:id="modPrice" layoutX="132.0" layoutY="233.0" />
+        <TextField fx:id="modMax" layoutX="132.0" layoutY="274.0" />
+        <TextField fx:id="modMin" layoutX="351.0" layoutY="274.0" />
+        <Button fx:id="SaveModPartbutton" layoutX="233.0" layoutY="349.0" mnemonicParsing="false" onAction="#saveModifyPart" text="Save" />
+        <Button fx:id="CancelModPartbutton" layoutX="300.0" layoutY="349.0" mnemonicParsing="false" onAction="#cancelModifyPart" text="Cancel" />
+        <Label layoutX="30.0" layoutY="122.0" text="ID" />
+        <Label layoutX="28.0" layoutY="161.0" text="Name" />
+        <Label layoutX="28.0" layoutY="198.0" text="Inv" />
+        <Label layoutX="28.0" layoutY="237.0" text="Price/Cost" />
+        <Label fx:id="housedLabel" layoutX="25.0" layoutY="314.0" />
+        <Label layoutX="312.0" layoutY="278.0" text="Min" />
+        <Label layoutX="25.0" layoutY="278.0" text="Max" />
+        <TextField fx:id="AddMachineID" layoutX="133.0" layoutY="310.0" />
+        <Label fx:id="outputbox" layoutX="351.0" layoutY="131.0" prefHeight="89.0" prefWidth="198.0" textAlignment="CENTER" />
+
+    </children>
+</AnchorPane>
